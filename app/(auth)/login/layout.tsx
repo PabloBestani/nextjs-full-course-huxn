@@ -1,4 +1,4 @@
-import NavBar from '@/components/login/nav-bar';
+import NavBar from '@/ui/login/nav-bar';
 import React from 'react'
 
 export default function Layout({ children }: {
