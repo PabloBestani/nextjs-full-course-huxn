@@ -1,6 +1,11 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
 export default function NavBar() {
+    const pathname = usePathname();
     const routes = [
     {
         href: '/login',
@@ -20,6 +25,7 @@ export default function NavBar() {
         <ul>
             {routes?.map((route, key) => {
                 const { href, text } = route;
+                if (href === pathname) return;
                 return (
                     <li key={key}>
                         <Link href={href}>{text}</Link>
