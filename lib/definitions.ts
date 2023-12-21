@@ -1,4 +1,4 @@
-export type Product = {
+export type Todo = {
     id: number;
     title: string;
     completed: boolean;

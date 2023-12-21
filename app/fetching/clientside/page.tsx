@@ -2,11 +2,11 @@
 
 import React from 'react'
 import { useEffect, useState } from 'react';
-import { Product } from '@/lib/definitions';
+import { Todo } from '@/lib/definitions';
 import { fetchTodos } from '@/lib/data';
 
 export default function ClientSideTodos() {
-    const [todos, setTodos] = useState<Product[]>([]);
+    const [todos, setTodos] = useState<Todo[]>([]);
 
     useEffect(() => {
         fetchTodos().then(data => setTodos(data));
