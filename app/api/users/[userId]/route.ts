@@ -1,12 +1,12 @@
 import { usersList } from "@/lib/db";
 import { NextResponse } from "next/server";
 
-export function GET(_: any, response: {
+export function GET(request: Request, { params }: {
     params: {
-        userId: number;
+        userId: string;
     }
 }) {
-    const { userId } = response.params;
+    const { userId } = params;
     const user = usersList.find(user => user.id === +userId);
     if (!user) {
         return NextResponse.json('User not found.', { status: 404 })
