@@ -37,3 +37,6 @@ next-env.d.ts
 
 # MOCK-DATABASE
 mock-users-data.json
+
+# OTHER
+localCopy
